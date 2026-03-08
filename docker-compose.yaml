@@ -1,0 +1,17 @@
+# 에이전트 격리 환경 설정
+services:
+  claw_agent:
+    build: .
+    environment:
+      - TZ=Asia/Seoul
+    # 로컬의 ./app_data 폴더만 컨테이너의 /workspace에 마운트하여 파일 접근을 통제합니다.
+    volumes:
+      - ./app_data:/workspace
+      - ./app_data/logs:/workspace/logs
+      - ./app_data/outputs:/workspace/outputs
+      - ./app_data/learning_records:/workspace/learning_records
+    env_file:
+      - .env
+
+volumes:
+  app_data:

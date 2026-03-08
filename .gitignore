@@ -1,0 +1,27 @@
+# 민감 정보
+.env
+
+# 봇 메모리 (실제 대화 기록 포함 가능)
+app_data/memory/*.json
+
+# 런타임 생성 파일
+app_data/outputs/
+app_data/learning_records/
+app_data/logs/
+
+# 볼륨 마운트 결과물
+outputs/
+
+# 테스트 환경
+test_env/
+
+# OS / IDE
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
